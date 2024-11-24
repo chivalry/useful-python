@@ -3,12 +3,8 @@ class CVInteger(int):
 
     def is_prime(self):
         """Uses early prime facts to determine primacy more quickly.
-
-        Returns:
-        bool: `True` if self is a prime number, `False` otherwise
-
-        Raises:
-        ValueError: If `self` is not a positive integer
+        :return bool - `True` if self is a prime number, `False` otherwise
+        :raises ValueError - If `self` is not a positive integer
         """
         if self <= 0:
             raise ValueError('Error: Only positive integers can be prime')
