@@ -1,6 +1,16 @@
 class CVString(str):
     '''Subclass of `str` that provides useful utility methods.'''
 
-    def chunk_string(self, length):
-        '''Return a list with the string broken into chunks of length specified.'''
-        return [self[0 + i:length + i] for i in range(0, len(self), length)]
+    def chunk_string(self, length: int) -> list[str]:
+        '''Return a list with the string broken into chunks of length specified.
+
+        Parameters:
+        length (int): The length of the chunks to break the string into
+
+        Returns:
+        list[str]: A list of strings each one nor longer than `length`.
+        '''
+        return [
+            self[0 + i:length + i]
+            for i in range(0, len(self), length)
+        ]
