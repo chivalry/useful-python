@@ -13,7 +13,8 @@ class CVString(str):
         ]
 
     def is_integer(self):
-        """Return `True` if the string can be interpreted as an integier, either positive or
-        negative
-        :return bool - `True` if the string can be converted to an integer"""
+        """Return `True` if the string can be interpreted as an integier, either positive
+        or negative
+        :return bool - `True` if the string can be converted to an integer
+        """
         return ((self[0] in ['-', '+']) and self[1:].isdigit()) or self.isdigit()
