@@ -2,10 +2,10 @@ class CVInteger(int):
     '''Subclass of `int` that provides useful utility methods.'''
 
     def is_prime(self):
-        """Uses early prime facts to determine primacy more quickly.
+        '''Uses early prime facts to determine primacy more quickly.
         :return bool - `True` if self is a prime number, `False` otherwise
         :raises ValueError - If `self` is not a positive integer
-        """
+        '''
         if self <= 0:
             raise ValueError('Error: Only positive integers can be prime')
         if self in [2, 3, 5, 7]:
